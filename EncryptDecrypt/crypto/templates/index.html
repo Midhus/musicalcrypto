@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html >
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE"> 
+    <title> Email System</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+ 
+    
+        <link rel="stylesheet" href="{% static 'data/css/style.css' %}">
+      
+    
+  </head>
+  
+  <body  >
+
+<div class="container">
+	<section id="content">
+		<form  id="a" name="a" action="{%url 'login:registeract' %}" method="post">{% csrf_token %}
+			<h1>MAIL Registration</h1>
+			<!-- <div>
+                            <input type="text" placeholder="Name" required="" id="user" name="user" />
+                        </div>
+                         -->
+             
+                        <div>
+				<input type="text" placeholder="Username" required="" id="user" name="user" />
+			</div>
+			<div>
+				<input type="password" placeholder="Password" required="" id="pass" name="pass"/>
+			</div>
+                        <!-- <div>
+				<input type="text" placeholder="phone" required="" id="phone" name="phone" />
+			</div> -->
+                        <!-- <div>
+				<input type="text" placeholder="country" required="" id="country" name="country" />
+			</div> -->
+                        <div>
+				<input type="text" placeholder=" Email" required="" id="Email" name="Email" />
+			</div>
+                        <!-- <div>
+				<input type="text" placeholder="Date Of Birth" required="" id="dob" name="dob" />
+			</div> -->
+			<div>
+				<input type="submit" value="Register" />
+				
+				<a href="{%url 'login:index' %}" >Login</a>
+			</div>
+		</form><!-- form -->
+		<div class="button">
+			<a href="#">Voice Mail</a>
+		</div><!-- button -->
+	</section><!-- content -->
+</div><!-- container -->
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+{% load static %}
+<html >
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE"> 
+        <title> Email System</title>
+
+
+         <link rel="stylesheet" href="{% static 'data/css/style.css' %}">
+
+
+      
+
+
+
+
+    </head>
+
+    <body   >
+
+        <div class="container">
+            <section id="content">
+                <form action="{% url 'login:loginact' %}" id="b" name="b" method="post">{% csrf_token %}
+                    <h1>VMAIL Login</h1>
+                    <div>
+                        <input type="text" placeholder="Username" required="" id="username" name="username"/>
+                    </div>
+                    <div>
+                        <input type="password" placeholder="Password" required="" id="password" name="password" />
+                    </div>
+                    <div>
+                        <input type="submit" value="Log in" />
+<!--                        <a href="#">Lost your password?</a>-->
+                        <a href="{% url 'login:register' %}">Register</a>
+                    </div>
+                </form><!-- form -->
+                <div class="button">
+                    <a href="#">Voice Mail</a>
+                </div><!-- button -->
+            </section><!-- content -->
+        </div><!-- container -->
+    </body>
+
+</html>
